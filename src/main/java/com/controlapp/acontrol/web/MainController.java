@@ -20,4 +20,9 @@ public class MainController {
     public ResponseEntity<String> greetingForName(@PathVariable String username) {
         return new ResponseEntity<>("Hello from ".concat(username), HttpStatus.OK);
     }
+
+    @GetMapping("/users")
+    public ResponseEntity<String> getAllUsers() {
+        return new ResponseEntity<>("Dear All users: <none>", HttpStatus.OK);
+    }
 }
