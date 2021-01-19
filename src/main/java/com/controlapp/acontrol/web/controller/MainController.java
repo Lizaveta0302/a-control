@@ -1,4 +1,4 @@
-package com.controlapp.acontrol.web;
+package com.controlapp.acontrol.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,10 +19,5 @@ public class MainController {
     @GetMapping("{username}")
     public ResponseEntity<String> greetingForName(@PathVariable String username) {
         return new ResponseEntity<>("Hello from ".concat(username), HttpStatus.OK);
-    }
-
-    @GetMapping("/users")
-    public ResponseEntity<String> getAllUsers() {
-        return new ResponseEntity<>("Dear All users: <none>", HttpStatus.OK);
     }
 }
